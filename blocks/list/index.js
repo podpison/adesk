@@ -1,10 +1,6 @@
 const elements = document.querySelectorAll('[data-list]');
 
 elements.forEach((element) => {
-  if (!element) {
-    return;
-  };
-
   element.addEventListener('click', () => {
     element.classList.toggle('list_opened');
   });
@@ -12,14 +8,7 @@ elements.forEach((element) => {
 
 const resizeCallback = () => {
   elements.forEach((element) => {
-    if (!element) {
-      return;
-    };
-    if (window.innerWidth > 600) {
-      element.classList.add('list_opened');
-    } else {
-      element.classList.remove('list_opened');
-    }
+    element.classList.toggle('list_opened', window.innerWidth > 600);
   })
 }
 
