@@ -98,7 +98,7 @@ const items = [
           },
           {
             name: 'Расширенный курс по учету',
-            icon: '/footer/course.svg',
+            icon: '../../public/footer/course.svg',
             href: '#',
           },
           {
@@ -174,7 +174,7 @@ const mainTemplate = Handlebars.compile(`
     <h4 class="list__heading">{{heading}}</h4>
     <img
       class="list__arrow-down"
-      src="/chevronDown.svg"
+      src="../../public/chevronDown.svg"
       alt="Стрелка вниз"
     />
   </div>
