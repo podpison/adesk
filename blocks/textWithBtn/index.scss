@@ -1,0 +1,40 @@
+@use 'styles/classes.scss' as *;
+
+.text-with-btn {
+  margin: 0 auto;
+
+  &__heading {
+    color: var(--dark-blue);
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 115%;
+    letter-spacing: -0.4px;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    align-self: stretch;
+    margin: 15px auto 0;
+
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+
+  &__action {
+    display: block;
+    width: fit-content;
+    margin: 25px auto 0;
+
+    @include tablet {
+      margin-top: 40px;
+
+      .btn {
+        font-size: 24px;
+      }
+    }
+  }
+}

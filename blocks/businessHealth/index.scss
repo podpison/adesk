@@ -1,0 +1,7 @@
+@use 'styles/classes.scss' as *;
+
+.business-health {
+  @include desktop {
+    flex-direction: row-reverse;
+  }
+}

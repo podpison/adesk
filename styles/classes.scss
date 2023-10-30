@@ -1,0 +1,82 @@
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 601px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 991px) {
+    @content;
+  }
+}
+
+.mt100-200 {
+  margin-top: 100px;
+
+  @include tablet {
+    margin-top: 150px;
+  }
+  @include desktop {
+    margin-top: 200px;
+  }
+}
+
+.mt100-250 {
+  margin-top: 100px;
+
+  @include tablet {
+    margin-top: 200px;
+  }
+  @include desktop {
+    margin-top: 250px;
+  }
+}
+
+.section-heading {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    @include tablet {
+      row-gap: 20px;
+      text-align: center;
+    }
+    @include desktop {
+      text-align: start;
+      max-width: 500px;
+    }
+  }
+
+  &__heading {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.15px;
+
+    @include tablet {
+      font-size: 45px;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 150%;
+  }
+}
+
+.gray-hover {
+  transition: background-color 150ms;
+  padding: 4px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgb(210 210 210);
+  }
+}

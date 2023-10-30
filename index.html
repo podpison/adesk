@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/vite.svg"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Adesk</title>
+  </head>
+  <body>
+    <header
+      class="header"
+      id="header"
+    >
+      <img
+        class="header__logo"
+        src="/header/logo.svg"
+        alt="Логотип"
+      />
+      <div class="header__content">
+        <div class="header__burger-bg"></div>
+        <button
+          class="header__close-burger-menu gray-hover"
+          id="close-burger"
+          aria-label="Закрыть меню"
+        >
+          <img
+            src="/close.svg"
+            alt="Закрыть"
+          />
+        </button>
+        <div class="header__content-inner">
+          <nav class="header__nav">
+            <ul class="header__nav-inner">
+              <li>
+                <a
+                  href="#"
+                  class="header__nav-item"
+                  >Возможности</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="header__nav-item"
+                  >Решения</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="header__nav-item"
+                  >Ресурсы</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="header__nav-item"
+                  >Блог</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="header__nav-item"
+                  >Отзывы</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="header__nav-item"
+                  >Цены</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <a
+            class="header__demo"
+            href="#"
+          >
+            <button class="btn btn_grey">
+              <img src="/header/demo/icon.png" />
+              <p>
+                <span>Записаться</span>
+                <span> на демо</span>
+              </p>
+            </button>
+          </a>
+          <div class="header__authorize-actions">
+            <a href="/login">
+              <button class="btn btn_bordered">Войти</button>
+            </a>
+            <a href="/register">
+              <button class="btn btn_blue">Зарегистрироваться</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button
+        class="header__burger gray-hover"
+        aria-label="Открыть меню"
+        id="burger"
+      >
+        <img
+          src="/header/burger.svg"
+          alt="Меню"
+        />
+      </button>
+    </header>
+    <main>
+      <section class="balance">
+        <div>
+          <div class="text-with-btn balance__text-with-btn">
+            <h1 class="text-with-btn__heading">Баланс</h1>
+            <p class="text-with-btn__description">
+              Для руководителя, который хочет эффективно распоряжаться ресурсами
+              компании и извлекать из них максимум прибыли.
+            </p>
+            <a
+              class="text-with-btn__action"
+              href="#"
+            >
+              <button class="btn btn_green">Протестировать бесплатно</button>
+            </a>
+          </div>
+          <picture class="balance__table">
+            <source
+              srcset="/balance/table.svg"
+              media="(min-width:990px)"
+            />
+            <img
+              src="/balance/table_mobile.svg"
+              alt="Таблица"
+            />
+          </picture>
+        </div>
+        <div class="balance__money-tree mt100-200">
+          <img
+            src="/balance/money-tree.svg"
+            alt="Денежное дерево"
+          />
+          <p>
+            Баланс — <strong>главный отчет собственника.</strong> Он поможет вам
+            понять, где кроется прибыль, какими активами обладает бизнес и
+            насколько эффективно они используются.
+          </p>
+        </div>
+      </section>
+      <section class="text-with-img mt100-200">
+        <div class="section-heading__container">
+          <h2 class="section-heading__heading">
+            Получите полную картину финансов компании
+          </h2>
+          <p class="section-heading__description">
+            Где заморожена прибыль? Богатеет ли компания со временем? Кому
+            принадлежит бизнес — вам или кредиторам? Насколько рационально
+            используются ресурсы?
+          </p>
+          <p class="section-heading__description">
+            Все ответы ждут вас в балансе.
+          </p>
+        </div>
+        <img
+          class="text-with-img__table"
+          src="/finPicture/table.svg"
+          alt="Финансовая таблица"
+        />
+      </section>
+      <section class="business-health text-with-img text-with-img_reversed mt100-200">
+        <div class="section-heading__container">
+          <h2 class="section-heading__heading">
+            Оперативно оценивайте здоровье бизнеса
+          </h2>
+          <p class="section-heading__description">
+            На основе отчета Adesk сам посчитает важные метрики собственника:
+            ROE, ликвидность, финансовую независимость и эффективность бизнеса,
+            как актива.
+          </p>
+          <p class="section-heading__description">
+            Остается только проанализировать показатели и скорректировать
+            стратегию развития компании.
+          </p>
+        </div>
+        <img
+          class="text-with-img__table"
+          src="/businessHealth/table.svg"
+          alt="График здоворья бизнеса"
+        />
+      </section>
+      <section class="setup-wizard mt100-200">
+        <div class="setup-wizard__heading-container section-heading__container">
+          <h2 class="section-heading__heading">
+            Построить отчет поможет мастер сборки баланса 🧙‍♂️
+          </h2>
+          <p class="section-heading__description">
+            Специальный робот вместе с вами пройдет все этапы сверки денег,
+            запасов, обязательств и капитала, чтобы активы точно сошлись с
+            пассивами.
+          </p>
+        </div>
+        <div class="setup-wizard__video-container">
+          <div class="setup-wizard__video-header">
+            <div class="setup-wizard__dots">
+              <span class="setup-wizard__dot"></span>
+              <span class="setup-wizard__dot"></span>
+              <span class="setup-wizard__dot"></span>
+            </div>
+          </div>
+          <div class="setup-wizard__video-inner">
+            <video
+              class="setup-wizard__video"
+              poster="/setupWizard/fallback.png"
+              muted
+              loop
+              autoplay
+            >
+              <source
+                src="/setupWizard/video.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </section>
+      <section class="text-with-img mt100-200">
+        <div class="section-heading__container">
+          <h2 class="section-heading__heading">
+            Соберите один раз, а дальше — мы сами
+          </h2>
+          <p class="section-heading__description">
+            После первичной сборки отчета сервис будет сам обновлять его
+            на основании изменений данных в сервисе.
+          </p>
+          <p class="section-heading__description">
+            Отчет строится по принципу двойной записи, то есть каждое ваше
+            действие в Adesk автоматически отображается в активах и пассивах.
+          </p>
+        </div>
+        <img
+          class="text-with-img__table"
+          src="/setupOnce/table.svg"
+          alt="Таблица"
+        />
+      </section>
+      <section class="start-with-us mt100-250">
+        <div class="start-with-us__text-with-btn text-with-btn">
+          <h1 class="text-with-btn__heading">
+            Узнайте, как ваш бизнес распоряжается ресурсами
+          </h1>
+          <p class="text-with-btn__description">
+            Зарегистрируйтесь и получите 14 дней бесплатного доступа
+            к балансовому отчету и другим инструментам Adesk.
+          </p>
+          <a
+            class="text-with-btn__action"
+            href="#"
+          >
+            <button class="btn btn_green">Начать учёт в Adesk</button>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer mt100-250">
+      <div class="footer__bg"></div>
+      <img
+        src="/footer/logo.svg"
+        alt="Логотип"
+      />
+      <ul
+        class="footer__lists"
+        id="footer-lists"
+      ></ul>
+      <ul class="footer__payment">
+        <li class="footer__payment-item">
+          <a href="#">
+            <img
+              src="/footer/payment/visa.svg"
+              alt="Виза"
+            />
+          </a>
+        </li>
+        <li class="footer__payment-item">
+          <a href="#">
+            <img
+              src="/footer/payment/mastercard.svg"
+              alt="Мастеркард"
+            />
+          </a>
+        </li>
+        <li class="footer__payment-item">
+          <a href="#">
+            <img
+              src="/footer/payment/tinkoff.svg"
+              alt="Тинькофф"
+            />
+          </a>
+        </li>
+      </ul>
+      <div class="footer__stores">
+        <a
+          class="footer__store"
+          href="#"
+        >
+          <img
+            src="/footer/stores/apple.svg"
+            alt="Apple"
+          />
+          <p>App store</p>
+        </a>
+        <a
+          class="footer__store"
+          href="#"
+        >
+          <img
+            src="/footer/stores/google.svg"
+            alt="Google"
+          />
+          <p>Google play</p>
+        </a>
+      </div>
+      <span class="footer__bottom-separator"></span>
+      <ul class="footer__social-networks">
+        <li class="footer__social-network">
+          <a href="#">
+            <img
+              src="/footer/socialNetworks/telegram.svg"
+              alt=""
+            />
+          </a>
+        </li>
+        <li class="footer__social-network">
+          <a href="#">
+            <img
+              src="/footer/socialNetworks/facebook.svg"
+              alt=""
+            />
+          </a>
+        </li>
+        <li class="footer__social-network">
+          <a href="#">
+            <img
+              src="/footer/socialNetworks/vk.svg"
+              alt=""
+            />
+          </a>
+        </li>
+        <li class="footer__social-network">
+          <a href="#">
+            <img
+              src="/footer/socialNetworks/youtube.svg"
+              alt=""
+            />
+          </a>
+        </li>
+        <li class="footer__social-network">
+          <a href="#">
+            <img
+              src="/footer/socialNetworks/instagram.svg"
+              alt=""
+            />
+          </a>
+        </li>
+      </ul>
+      <div class="footer__bottom">
+        <p class="footer__company-name">ООО «Адеск», 2022</p>
+        <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
+        <a class="footer__bottom-link" href="#">Договор-оферта</a>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="/main.js"
+    ></script>
+  </body>
+</html>

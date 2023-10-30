@@ -1,0 +1,41 @@
+@use 'styles/classes.scss' as *;
+
+.text-with-img {
+  display: grid;
+  row-gap: 20px;
+
+  @include tablet {
+    row-gap: 40px;
+  }
+
+  @include desktop {
+    grid-template-columns: minmax(400px, 1fr) 1fr;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 80px;
+  }
+
+  &_reversed {
+    @include desktop {
+      grid-template-columns: 1fr minmax(400px, 1fr);
+      .text-with-img__table {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    }
+  }
+
+  &__table {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 558px;
+
+    @include desktop {
+      margin: 0;
+    }
+  }
+}

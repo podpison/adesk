@@ -1,0 +1,25 @@
+@import './fonts.css';
+@import './reset.css';
+@import './../blocks/index.scss';
+
+:root {
+  --white: #fff;
+  --light-blue: #0F8FF9;
+  --light-blue_hover: #0072EC;
+  --green: #00C064;
+  --green_hover: #10B265;
+  --black: #2C3038;
+  --grey: #efefef;
+  --dark-blue: #051534;
+  --dark-blue_hover: #081f4b;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Graphik LCG;
+  padding: 0 15px;
+  color: var(--black);
+}

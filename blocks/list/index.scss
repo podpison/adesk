@@ -1,0 +1,78 @@
+@use 'styles/classes.scss' as *;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  &_opened {
+    .list__content {
+      margin-top: 0;
+    }
+    .list__arrow-down {
+      transform: rotateZ(180deg);
+    }
+  }
+
+  &__heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: border 150ms;
+
+      &:hover {
+        border-bottom-color: var(--white);
+      }
+    }
+  }
+
+  &__heading {
+    font-weight: 500;
+    line-height: 120%;
+    
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__arrow-down {
+    transition: transform 150ms;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__content-container {
+    overflow: hidden;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    transition: all 150ms;
+    margin-top: -100%;
+  }
+
+  &__item {
+    color: #8394b5;
+    line-height: 120%;
+
+    & > a {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: color 150ms;
+      width: fit-content;
+
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+}

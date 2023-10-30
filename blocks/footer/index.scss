@@ -1,0 +1,211 @@
+@use 'styles/classes.scss' as *;
+
+.footer {
+  position: relative;
+  color: var(--white);
+  padding: 50px 0 25px;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 60px 0 30px;
+  }
+
+  &__bg {
+    background-color: var(--dark-blue);
+    position: absolute;
+    inset: 0 0 -1px calc((100vw - 100%) / 2 * -1);
+    z-index: -10;
+    width: 100vw;
+  }
+
+  &__lists {
+    display: grid;
+    gap: 20px;
+    margin-top: 40px;
+
+    @include tablet {
+      margin-top: 50px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column: 1 / 3;
+      row-gap: 40px;
+
+      #possibilities {
+        grid-row: 1 / 3;
+      }
+      #adeskForBusiness {
+        grid-row: 3 / 5;
+      }
+      #resources {
+        grid-row: 1;
+      }
+      #information {
+        grid-row: 2;
+      }
+    }
+    @include desktop {
+      grid-column: 1 / 5;
+      grid-template-columns: 1fr 1fr 1fr max-content;
+      grid-template-rows: repeat(3, max-content);
+      margin-top: 60px;
+      row-gap: 20px;
+
+      #adeskForBusiness,
+      #resources,
+      #possibilities {
+        grid-row: 1/4;
+      }
+      #information {
+        grid-row: 1;
+      }
+      #contacts {
+        grid-row: 2;
+        grid-column: 4;
+      }
+      #offersAndCooperation {
+        grid-row: 3;
+        grid-column: 4;
+      }
+    }
+  }
+
+  &__stores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @include mobile {
+      margin-top: 30px;
+    }
+    @include desktop {
+      grid-row: 3;
+      grid-column: 3 / 6;
+      margin-left: auto;
+      margin-top: auto;
+    }
+  }
+
+  &__store {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    width: fit-content;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    transition: background-color 150ms;
+    cursor: pointer;
+    height: fit-content;
+
+    &:hover {
+      background-color: var(--dark-blue_hover);
+    }
+  }
+
+  &__payment {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile {
+      display: none;
+    }
+    @include desktop {
+      grid-row: 3;
+      grid-column: 1 / 3;
+      margin-top: 100px;
+    }
+  }
+
+  &__payment-item {
+    transition: opacity 150ms;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__social-networks {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    @include mobile {
+      margin-top: 40px;
+    }
+    @include tablet {
+      grid-row: 1;
+      grid-column: 2;
+      margin-left: auto;
+    }
+    @include desktop {
+      grid-row: 5;
+      grid-column: 3/6;
+      margin-top: 0;
+    }
+  }
+
+  &__social-network {
+    transition: opacity 150ms;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__bottom-separator {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 1px;
+    grid-column: 1 / 6;
+    grid-row: 4;
+    margin: 20px 0 25px;
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 10px;
+    color: #8394b5;
+    font-size: 14px;
+    line-height: 120%;
+    margin-top: 40px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+    @include tablet {
+      gap: 25px;
+      margin-top: 45px;
+      grid-column: 1 / 3;
+    }
+    @include desktop {
+      gap: 20px;
+      margin-top: 0;
+      grid-row: 5;
+      grid-column: 1/3;
+    }
+  }
+
+  &__company-name {
+    color: var(--white);
+  }
+  &__bottom-link {
+    transition: 150ms color;
+
+    &:hover {
+      color: var(--white);
+    }
+  }
+}

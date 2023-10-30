@@ -1,0 +1,38 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: background-color 200ms;
+
+  &_bordered {
+    border: 1px solid rgba(5, 21, 52, 0.3);
+    background-color: var(--white);
+
+    &:hover {
+      background-color: #f8f8f8;
+    }
+  }
+  &_blue {
+    background-color: var(--light-blue);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--light-blue_hover);
+    }
+  }
+  &_green {
+    background-color: var(--green);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--green_hover);
+    }
+  }
+  &_grey {
+    &:hover {
+      background-color: var(--grey);
+    }
+  }
+}
