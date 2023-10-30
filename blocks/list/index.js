@@ -1,15 +1,6 @@
-const itemIds = [
-  'possibilities',
-  'adeskForBusiness',
-  'resources',
-  'information',
-  'contacts',
-  'offersAndCooperation'
-];
+const elements = document.querySelectorAll('[data-list]');
 
-itemIds.forEach((id) => {
-  const element = document.getElementById(id);
-
+elements.forEach((element) => {
   if (!element) {
     return;
   };
@@ -19,10 +10,8 @@ itemIds.forEach((id) => {
   });
 })
 
-window.addEventListener('resize', () => {
-  itemIds.forEach((id) => {
-    const element = document.getElementById(id);
-
+const resizeCallback = () => {
+  elements.forEach((element) => {
     if (!element) {
       return;
     };
@@ -32,4 +21,8 @@ window.addEventListener('resize', () => {
       element.classList.remove('list_opened');
     }
   })
-});
+}
+
+resizeCallback();
+
+window.addEventListener('resize', resizeCallback);
