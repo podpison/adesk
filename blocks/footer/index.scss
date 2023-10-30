@@ -84,11 +84,13 @@
     @include mobile {
       margin-top: 30px;
     }
+    @include tablet {
+      margin-left: auto;
+      margin-top: auto;
+    }
     @include desktop {
       grid-row: 3;
       grid-column: 3 / 6;
-      margin-left: auto;
-      margin-top: auto;
     }
   }
 
@@ -116,6 +118,9 @@
 
     @include mobile {
       display: none;
+    }
+    @include tablet {
+      margin-top: 80px;
     }
     @include desktop {
       grid-row: 3;
