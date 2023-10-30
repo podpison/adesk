@@ -62,8 +62,11 @@
       justify-content: center;
       margin: 0;
     }
-    .header__demo span:last-child {
-      display: inline;
+    .header__demo span {
+      &:first-child,
+      &:last-child {
+        display: inline;
+      }
     }
   }
 
@@ -191,7 +194,7 @@
         }
       }
       &:last-child {
-        @media screen and (max-width: 1330px) {
+        @media screen and (max-width: 1350px) {
           display: none;
         }
       }
